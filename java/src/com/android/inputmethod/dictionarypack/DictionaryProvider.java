@@ -403,8 +403,7 @@ public final class DictionaryProvider extends ContentProvider {
                         if (!f.isFile()) {
                             continue;
                         }
-                    } else if (MetadataDbHelper.STATUS_AVAILABLE == wordListStatus
-                            || MetadataDbHelper.STATUS_DELETING == wordListStatus) {
+                    } else if (MetadataDbHelper.STATUS_AVAILABLE == wordListStatus) {
                         // The locale is the id for the main dictionary.
                         UpdateHandler.installIfNeverRequested(context, clientId, wordListId);
                         continue;
